@@ -29,7 +29,5 @@ module.exports = {
     'no-unused-vars': 'off',
     'import/no-dynamic-require': 'off',
     'no-restricted-globals': 'off',
-    'global-require': 'off',
-    'no-undef': 'off',
   },
 };

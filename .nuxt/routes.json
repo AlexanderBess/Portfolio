@@ -1,8 +1,16 @@
 [
   {
+    "name": "vee-validate",
+    "path": "/vee-validate",
+    "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\vee-validate.vue",
+    "chunkName": "pages/vee-validate",
+    "_name": "_0490a7d2"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_628d8818"
   }
 ]
