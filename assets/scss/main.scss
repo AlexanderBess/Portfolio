@@ -1,0 +1,32 @@
+@import './_reset.css';
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(~assets/fonts/GilroyExtraBold.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url(~assets/fonts/GilroyLight.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url(~assets/fonts/Gilroy-Regular.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(~assets/fonts/Gilroy-Medium.woff);
+  font-weight: 500;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.b-toaster {
+  z-index: 3000;
+}
