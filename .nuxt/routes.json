@@ -2,15 +2,15 @@
   {
     "name": "vee-validate",
     "path": "/vee-validate",
-    "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\vee-validate.vue",
+    "component": "C:\\\\Users\\\\2AB\\\\WebstormProjects\\\\Portfolio\\\\pages\\\\vee-validate.vue",
     "chunkName": "pages/vee-validate",
-    "_name": "_0490a7d2"
+    "_name": "_5759ecb0"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\2AB\\\\WebstormProjects\\\\Portfolio\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_628d8818"
+    "_name": "_0626dba7"
   }
 ]

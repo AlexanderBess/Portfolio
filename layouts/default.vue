@@ -4,10 +4,10 @@
       <div class="template__header header">
         <div class="header__container">
           <a>Home</a>
-          <a>Home</a>
-          <a>Home</a>
-          <a>Home</a>
-          <a>Home</a>
+          <a>About me</a>
+          <a>Skills</a>
+          <a>Portfolio</a>
+          <a>Contacts</a>
         </div>
         <div class="header__line" />
       </div>
@@ -59,6 +59,12 @@ export default {
     flex-direction: column;
     align-items: center;
     position: relative;
+  }
+  &__footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
