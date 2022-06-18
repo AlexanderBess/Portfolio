@@ -4,8 +4,8 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _5759ecb0 = () => interopDefault(import('..\\pages\\vee-validate.vue' /* webpackChunkName: "pages/vee-validate" */))
-const _0626dba7 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _0490a7d2 = () => interopDefault(import('..\\pages\\vee-validate.vue' /* webpackChunkName: "pages/vee-validate" */))
+const _628d8818 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -20,11 +20,11 @@ export const routerOptions = {
 
   routes: [{
     path: "/vee-validate",
-    component: _5759ecb0,
+    component: _0490a7d2,
     name: "vee-validate"
   }, {
     path: "/",
-    component: _0626dba7,
+    component: _628d8818,
     name: "index"
   }],
 

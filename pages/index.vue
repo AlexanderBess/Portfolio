@@ -3,10 +3,10 @@
     <div class="content__head head">
       <div class="head__text">
         <div class="head__title">
-          Aleksandr Bessmeltsev
+          {{ $t('home.meName') }}
         </div>
         <div class="head__description">
-          Frontend developer<br>22 years old, Tomsk
+          {{ $t('home.meInfo') }}
         </div>
       </div>
       <img
@@ -17,20 +17,17 @@
     <div class="content__block content__block_gray block">
       <div class="block__info">
         <div class="block__title">
-          About me
+          {{ $t('header.aboutMe') }}
         </div>
         <div class="block__description">
           <div class="block__text">
-            Hi, I'm Alex – Frontend developer from Tomsk.<br>
-            I'm interested in design and everything connected with it.
+            {{ $t('aboutMe.classic.first') }}
           </div>
           <div class="block__text">
-            I'm studying at courses "Web and mobile design<br>
-            interfaces" in IT-Academy.
+            {{ $t('aboutMe.classic.second') }}
           </div>
           <div class="block__text">
-            Ready to implement excellent projects<br>
-            with wonderful people.
+            {{ $t('aboutMe.classic.last') }}
           </div>
         </div>
       </div>
@@ -38,20 +35,33 @@
     <div class="content__block block">
       <div class="block__info">
         <div class="block__title">
-          Skills
+          {{ $t('header.skills') }}
         </div>
         <div class="block__description">
           I work in such programs as
         </div>
         <div class="block__skills">
-          123123123
+          <div
+            v-for="(skill, key) in skills"
+            :key="key"
+            class="block__skill skill"
+          >
+            <img
+              class="skill__img"
+              :src="skill.img"
+              :alt="skill.name"
+            >
+            <div class="skill__title">
+              {{ skill.name }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="content__block content__block_gray block">
       <div class="block__info">
         <div class="block__title">
-          Portfolios
+          {{ $t('header.portfolios') }}
         </div>
         <div class="block__description">
           123123123
@@ -61,7 +71,7 @@
     <div class="content__block content__block_last block">
       <div class="block__info">
         <div class="block__title">
-          Contacts
+          {{ $t('header.contacts') }}
         </div>
         <div class="block__description">
           <div class="block__text">
@@ -83,14 +93,26 @@
 <script>
 export default {
   name: 'Main',
-  data() {
-    return {
-      skills: {
-        name: 'Vue.js',
-        description: 'framework',
-        image: '~assets/img/skills/cardHasBeenAdded.svg',
-      },
-    };
+  computed: {
+    skills() {
+      return [
+        {
+          // eslint-disable-next-line global-require
+          img: require('assets/img/skills/Vue.svg'),
+          name: this.$t('skills.vue'),
+        },
+        {
+          // eslint-disable-next-line global-require
+          img: require('assets/img/skills/Nuxt.svg'),
+          name: this.$t('skills.nuxt'),
+        },
+        {
+          // eslint-disable-next-line global-require
+          img: require('assets/img/skills/PHP.svg'),
+          name: this.$t('skills.php'),
+        },
+      ];
+    },
   },
 };
 </script>
@@ -123,7 +145,8 @@ export default {
   }
   &__text {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 30% 180px;
+    justify-content: space-between;
   }
   &__title {
     font-family: 'Gilroy-Bold';
@@ -178,6 +201,26 @@ export default {
     display: grid;
     justify-items: center;
     grid-gap: 20px;
+  }
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 50px;
+    align-items: center;
+  }
+  &__skill {
+    display: grid;
+    justify-items: center;
+    grid-gap: 20px;
+  }
+}
+.skill {
+  &__img {
+    height:120px;
+  }
+  &__title {
+    font-family: 'Gilroy-Medium';
+    font-size: 18px;
   }
 }
 </style>

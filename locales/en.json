@@ -1,5 +1,37 @@
 {
-  "test": "Hello world!",
+  "header": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "portfolios": "Portfolios",
+    "contacts": "Contacts"
+  },
+  "home": {
+    "meName": "Aleksandar Bessmeltsev",
+    "meInfo": "Frontend developer 22 years old, Tomsk"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "classic": {
+      "first": "Hi, I'm Alex – Frontend developer from Tomsk. I'm interested in design and everything connected with it.",
+      "second": "I'm studying at courses Web and mobile design interfaces in IT-Academy.",
+      "last": "last"
+    }
+  },
+  "skills": {
+    "nuxt": "Nuxt.js",
+    "vue": "Vue.js",
+    "php": "PHP"
+  },
+  "socials": {
+    "linkedin": "Linkedin",
+    "instagram": "Instagram",
+    "github": "GitHub",
+    "telegram": "Telegram"
+  },
+  "another": {
+    "followMe": "Follow Me"
+  },
   "messages": {
     "alpha": "The {_field_} field may only contain alphabetic characters",
     "alpha_num": "The {_field_} field may only contain alpha-numeric characters",

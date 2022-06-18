@@ -2,13 +2,13 @@
   {
     "name": "vee-validate",
     "path": "/vee-validate",
-    "component": "C:\\\\Users\\\\2AB\\\\WebstormProjects\\\\Portfolio\\\\pages\\\\vee-validate.vue",
+    "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\vee-validate.vue",
     "chunkName": "pages/vee-validate"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\2AB\\\\WebstormProjects\\\\Portfolio\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Sage\\\\WebstormProjects\\\\portfolio\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
   }
 ]

@@ -3,11 +3,12 @@
     <div class="primary__template template">
       <div class="template__header header">
         <div class="header__container">
-          <a>Home</a>
-          <a>About me</a>
-          <a>Skills</a>
-          <a>Portfolio</a>
-          <a>Contacts</a>
+          <a
+            v-for="(name, key) in titles"
+            :key="key"
+          >
+            {{ name }}
+          </a>
         </div>
         <div class="header__line" />
       </div>
@@ -22,6 +23,7 @@
             class="footer__social"
             :class="`footer__social_${social.name}`"
             :href="social.link"
+            target="_blank"
           />
         </div>
         <div class="footer__text">
@@ -37,6 +39,15 @@
 <script>
 export default {
   computed: {
+    titles() {
+      return [
+        this.$t('header.home'),
+        this.$t('header.aboutMe'),
+        this.$t('header.skills'),
+        this.$t('header.portfolios'),
+        this.$t('header.contacts'),
+      ];
+    },
     socials() {
       return [
         {
@@ -74,7 +85,7 @@ export default {
   &__template {
     height: 100%;
     display: grid;
-    grid-template-rows: 100px 1fr auto;
+    grid-template-rows: auto 1fr auto;
   }
 }
 
@@ -83,10 +94,19 @@ export default {
   min-height: 100vh;
   overflow: auto;
   &__header {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    padding-top: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: #FFFFFFBF;
   }
   &__content {
     display: flex;
