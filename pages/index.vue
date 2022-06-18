@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="content__block block">
+    <div class="content__block content__block_last block">
       <div class="block__info">
         <div class="block__title">
           Contacts
@@ -72,8 +72,9 @@
         <button
           type="button"
           class="block__btn"
+          href="mailto:alexbessmelcev@gmail.com"
         >
-          Submit
+          Send message
         </button>
       </div>
     </div>
@@ -81,7 +82,16 @@
 </template>
 <script>
 export default {
-
+  name: 'Main',
+  data() {
+    return {
+      skills: {
+        name: 'Vue.js',
+        description: 'framework',
+        image: '~assets/img/skills/cardHasBeenAdded.svg',
+      },
+    };
+  },
 };
 </script>
 
@@ -101,6 +111,9 @@ export default {
     padding: 10% 0;
     &_gray {
       background: #F6F6F6;
+    }
+    &_last {
+      padding: 10% 0 5% 0;
     }
   }
 }

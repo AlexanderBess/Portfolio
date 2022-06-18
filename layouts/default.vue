@@ -14,8 +14,20 @@
       <div class="template__content">
         <nuxt />
       </div>
-      <div class="template__footer">
-        Footer
+      <div class="template__footer footer">
+        <div class="footer__socials">
+          <a
+            v-for="(social, key) in socials"
+            :key="`social-${key}`"
+            class="footer__social"
+            :class="`footer__social_${social.name}`"
+            :href="social.link"
+          />
+        </div>
+        <div class="footer__text">
+          Follow me on<br>
+          LinkedIn, Telegram, Instagram, GitHub
+        </div>
       </div>
     </div>
     <base-modal-container />
@@ -24,6 +36,28 @@
 </template>
 <script>
 export default {
+  computed: {
+    socials() {
+      return [
+        {
+          name: 'linkedin',
+          link: 'https://www.linkedin.com/in/alex-bessmelcev/',
+        },
+        {
+          name: 'telegram',
+          link: 'https://t.me/Alex_Sage',
+        },
+        {
+          name: 'instagram',
+          link: 'https://www.instagram.com/alexanderbessmelcev/',
+        },
+        {
+          name: 'github',
+          link: 'https://github.com/AlexanderBess',
+        },
+      ];
+    },
+  },
   mounted() {
     // fake loader
     // this.SetLoader(true);
@@ -61,10 +95,9 @@ export default {
     position: relative;
   }
   &__footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-gap: 20px;
+    padding-bottom: 10%;
   }
 }
 
@@ -89,6 +122,53 @@ export default {
     height: 1px;
     margin-top: 25px;
     background-color: #828282;
+  }
+}
+.footer {
+  &__socials {
+    display: grid;
+    grid-template-columns: repeat(4, 41px);
+    justify-content: center;
+    grid-gap: 60px;
+  }
+  &__social {
+    width: 41px;
+    height: 41px;
+    background-size: contain;
+    &_linkedin {
+      border-radius: 5px;
+      background-image: url('assets/img/social/linkedin.svg');
+    }
+    &_linkedin:hover {
+      background-color: #82828261;
+    }
+    &_telegram {
+      border-radius: 50%;
+      background-image: url('assets/img/social/telegram.svg');
+    }
+    &_telegram:hover {
+      background-color: #82828261;
+    }
+    &_instagram {
+      border-radius: 12px;
+      background-image: url('assets/img/social/instagram.svg');
+    }
+    &_instagram:hover {
+      background-color: #82828261;
+    }
+    &_github {
+      border-radius: 50%;
+      background-image: url('assets/img/social/github.svg');
+    }
+    &_github:hover {
+      background-color: #82828261;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-family: 'Gilroy-Medium';
+    font-size: 14px;
+    color: #828282;
   }
 }
 </style>
