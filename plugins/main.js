@@ -15,7 +15,7 @@ Vue.mixin({
       this.$store.dispatch('modals/hide');
     },
     SetLoader(value) {
-      this.$store.dispatch('loader/setLoading', value);
+      this.$store.dispatch('main/setLoading', value);
     },
     Floor: (value, precision = 4) => {
       const form = 10 ** precision;
@@ -31,7 +31,7 @@ Vue.mixin({
     },
     Require(img) {
       // eslint-disable-next-line global-require
-      // return require(`assets/img/${img}`);
+      return require(`assets/img/${img}`);
     },
   },
 });

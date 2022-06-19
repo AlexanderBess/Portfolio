@@ -97,18 +97,15 @@ export default {
     skills() {
       return [
         {
-          // eslint-disable-next-line global-require
-          img: require('assets/img/skills/Vue.svg'),
+          img: this.Require('skills/Vue.svg'),
           name: this.$t('skills.vue'),
         },
         {
-          // eslint-disable-next-line global-require
-          img: require('assets/img/skills/Nuxt.svg'),
+          img: this.Require('skills/Nuxt.svg'),
           name: this.$t('skills.nuxt'),
         },
         {
-          // eslint-disable-next-line global-require
-          img: require('assets/img/skills/PHP.svg'),
+          img: this.Require('skills/PHP.svg'),
           name: this.$t('skills.php'),
         },
       ];

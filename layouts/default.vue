@@ -5,7 +5,12 @@
         <div class="header__container">
           <a
             v-for="(name, key) in titles"
+            :id="`ELEMENT_${name}`"
+            :ref="`ELEMENT_${name}`"
             :key="key"
+            class="header__title"
+            :class="name === choosenBlock ? 'header__title_active' : ''"
+            @click="chooseBlock(name)"
           >
             {{ name }}
           </a>
@@ -38,6 +43,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      choosenBlock: 'Home',
+    };
+  },
   computed: {
     titles() {
       return [
@@ -71,10 +81,15 @@ export default {
   },
   mounted() {
     // fake loader
-    // this.SetLoader(true);
-    // setTimeout(() => {
-    //   this.SetLoader(false);
-    // }, 1000);
+    this.SetLoader(true);
+    setTimeout(() => {
+      this.SetLoader(false);
+    }, 1000);
+  },
+  methods: {
+    chooseBlock(name) {
+      this.choosenBlock = name;
+    },
   },
 };
 </script>
@@ -126,16 +141,20 @@ export default {
     @include container;
     display: flex;
     justify-content: space-between;
-    a {
-      font-family: 'Gilroy-Bold';
-      font-size: 18px;
-      line-height: 22px;
-      color: #828282;
-      cursor: pointer;
-    }
-    a:hover {
+  }
+  &__title {
+    font-family: 'Gilroy-Bold';
+    font-size: 18px;
+    line-height: 22px;
+    color: #828282;
+    cursor: pointer;
+    text-decoration: none;
+    &_active {
       color: #070707;
     }
+  }
+  &__title:hover {
+    color: #070707;
   }
   &__line {
     @include container;
